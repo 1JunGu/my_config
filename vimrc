@@ -138,12 +138,12 @@ let fortran_have_tabs=1
 "" =>Insert file title
 "------------------------------------------------
 "New .ncl .F Insert headline automatically
-autocmd BufNewFile *.sh,*.ncl,*.F,.f90 exec ":call SetTitle()" 
+autocmd BufNewFile *.sh,*.ncl,*.F,*.f90 exec ":call SetTitle()" 
 ""Define function SetTitile 
 func SetTitle()
 		"if filetype is .ncl 
 		if &filetype =='ncl'
-				call setline(1,";------------------------------------------------------------")
+				call setline(1,";---------------------------------------------------")
 				call append(line("."), "; File Name: ".expand("%"))
 				call append(line(".")+1, "; Author: JunGu")
 				call append(line(".")+2, "; Mail: gj99@mail.ustc.edu.cn")
@@ -151,16 +151,15 @@ func SetTitle()
 				call append(line(".")+4, ";---------------------------------------------------")
 		endif
         if &filetype == 'sh' 
-                call setline(1, "#############################################################") 
+                call setline(1,"###################################################") 
                 call append(line("."), "# File Name: ".expand("%")) 
                 call append(line(".")+1, "# Author: JunGu") 
                 call append(line(".")+2, "# Mail: gj99@mail.ustc.edu.cn") 
                 call append(line(".")+3, "# Created Time: ".strftime("%c")) 
                 call append(line(".")+4, "####################################################") 
                 call append(line(".")+5, "#!/bin/bash")
-                call append(line(".")+6, "")
         endif
 		"When a new file is created, it is automatically positioned to the end
 		"of file
-		autocmd BufNewFile * normal G
+        autocmd BufNewFile * normal G
 endfunc
