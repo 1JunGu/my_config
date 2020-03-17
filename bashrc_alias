@@ -1,0 +1,15 @@
+#shortcut keys
+cls() { cd "$1"; ls;}
+mcdir() { mkdir "$1"; cls "$1";}
+con_gif() { convert -delay 10 -loop 0 *.png "$1";}
+nc_fort() { gfortran -I /usr/include/netcdf.inc -o "$1" "$2" -LDIRECTORY  /usr/lib64/libnetcdff.so;}
+exch_name() { mv "$1" tmp; mv "$2" "$1"; mv tmp "$2";}
+
+#alias
+alias ..="cls .."
+alias jungu="cls /lustre/data/jungu"
+alias meranti="cls /lustre/data/jungu/Typhoon/Meranti"
+alias ls="ls --color=auto"
+alias ll="ls -lh"
+alias la="ls -alh"
+alias vi="vim"
