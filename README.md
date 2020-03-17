@@ -1,11 +1,10 @@
 # My Lustre configuration  
 ## includings:  
-###Files:  
-        .bashrc  
-        .bashrc_alias  
-        .vimrc  
-###Directories:  
-        .vim  
-
+### Files:  
+        *.bashrc*  
+        *.bashrc_alias*  
+        *.vimrc*  
+### Directories:  
+        *.vim*  
 # Acknowledgements:  
 
