@@ -1,7 +1,7 @@
 # My Lustre configuration  
 ## includings:  
 ### Files:  
-+ **.bashrc**
++ ~**.bashrc**~
 + **.bashrc_alias**
 + **.vimrc** 
 ### Directories:  
